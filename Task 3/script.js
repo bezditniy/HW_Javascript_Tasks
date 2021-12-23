@@ -1,8 +1,10 @@
-function counter() {
-    console.count("Количество вызовов функции")
+function count() {
+	let i = 1;
+    return () => ("Количество вызовов функции: " + (i++));
 }
 
-counter();
-counter();
-counter();
-counter();
+let show = count();
+
+console.log(show());
+console.log(show());
+console.log(show());
